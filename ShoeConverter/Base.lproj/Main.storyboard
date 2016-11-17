@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoeConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,119 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men's " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3Q-0L-a6C">
+                                <rect key="frame" x="20" y="20" width="183" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbc-cY-xsr">
+                                <rect key="frame" x="268" y="20" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Icv-Jv-dNS"/>
+                                </constraints>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="ConvertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJB-7R-njr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe Size Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-e3-hkU">
+                                <rect key="frame" x="20" y="58" width="287" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-Rc-Dlo">
+                                <rect key="frame" x="20" y="114" width="287" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe Size Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtf-0l-Bg9">
+                                <rect key="frame" x="20" y="58" width="287" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women's " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa6-cl-5EW">
+                                <rect key="frame" x="20" y="164" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe Size Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6p-6K-fR9">
+                                <rect key="frame" x="20" y="210" width="287" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24I-Bd-pjH">
+                                <rect key="frame" x="273" y="164" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="sYT-tc-yND"/>
+                                </constraints>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertWomensShoeSizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="If6-kj-Oee"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-d3-0fE">
+                                <rect key="frame" x="25" y="278" width="282" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="yaJ-jd-wtJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Whole Numbers Only " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx9-3P-iIH">
+                                <rect key="frame" x="25" y="328" width="287" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="tTy-T9-7Qg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nbc-cY-xsr" firstAttribute="top" secondItem="i3Q-0L-a6C" secondAttribute="top" id="218-Nc-Igr"/>
+                            <constraint firstItem="ezL-Rc-Dlo" firstAttribute="trailing" secondItem="a6p-6K-fR9" secondAttribute="trailing" id="2rQ-Dr-hUK"/>
+                            <constraint firstItem="nbc-cY-xsr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Io-bC-XPi"/>
+                            <constraint firstItem="ezL-Rc-Dlo" firstAttribute="top" secondItem="mtf-0l-Bg9" secondAttribute="bottom" constant="26" id="7VL-2I-ONd"/>
+                            <constraint firstItem="24I-Bd-pjH" firstAttribute="leading" secondItem="Sa6-cl-5EW" secondAttribute="trailing" constant="43" id="CKf-io-Bb4"/>
+                            <constraint firstItem="mtf-0l-Bg9" firstAttribute="leading" secondItem="i3Q-0L-a6C" secondAttribute="leading" id="Jbv-ZH-URc"/>
+                            <constraint firstItem="a6p-6K-fR9" firstAttribute="top" secondItem="24I-Bd-pjH" secondAttribute="bottom" constant="16" id="LEo-65-cV0"/>
+                            <constraint firstItem="uTZ-d3-0fE" firstAttribute="top" secondItem="a6p-6K-fR9" secondAttribute="bottom" constant="38" id="Ls5-bb-h03"/>
+                            <constraint firstItem="a6p-6K-fR9" firstAttribute="leading" secondItem="Sa6-cl-5EW" secondAttribute="leading" id="MVc-eP-jl8"/>
+                            <constraint firstItem="mtf-0l-Bg9" firstAttribute="baseline" secondItem="eJx-e3-hkU" secondAttribute="baseline" id="N4t-m7-PJr"/>
+                            <constraint firstItem="Fx9-3P-iIH" firstAttribute="top" secondItem="uTZ-d3-0fE" secondAttribute="bottom" constant="29" id="NRT-di-2Fw"/>
+                            <constraint firstItem="eJx-e3-hkU" firstAttribute="leading" secondItem="mtf-0l-Bg9" secondAttribute="leading" id="OZm-f5-Bhu"/>
+                            <constraint firstItem="Sa6-cl-5EW" firstAttribute="top" secondItem="24I-Bd-pjH" secondAttribute="top" id="Rwj-bC-ZC0"/>
+                            <constraint firstItem="mtf-0l-Bg9" firstAttribute="trailing" secondItem="eJx-e3-hkU" secondAttribute="trailing" id="TWd-3J-1uQ"/>
+                            <constraint firstItem="uTZ-d3-0fE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="V7P-m2-qOc"/>
+                            <constraint firstItem="Sa6-cl-5EW" firstAttribute="top" secondItem="ezL-Rc-Dlo" secondAttribute="bottom" constant="29" id="WSw-8X-dHg"/>
+                            <constraint firstItem="a6p-6K-fR9" firstAttribute="trailing" secondItem="uTZ-d3-0fE" secondAttribute="trailing" id="Yxo-eK-Fsx"/>
+                            <constraint firstItem="ezL-Rc-Dlo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="chy-YY-3fg"/>
+                            <constraint firstItem="Sa6-cl-5EW" firstAttribute="leading" secondItem="ezL-Rc-Dlo" secondAttribute="leading" id="cth-Mu-Yb8"/>
+                            <constraint firstItem="ezL-Rc-Dlo" firstAttribute="trailing" secondItem="mtf-0l-Bg9" secondAttribute="trailing" id="eGR-Z8-AhP"/>
+                            <constraint firstItem="mtf-0l-Bg9" firstAttribute="top" secondItem="nbc-cY-xsr" secondAttribute="bottom" constant="8" symbolic="YES" id="eLc-a7-Mjt"/>
+                            <constraint firstItem="nbc-cY-xsr" firstAttribute="leading" secondItem="i3Q-0L-a6C" secondAttribute="trailing" constant="65" id="h1h-Qf-B7C"/>
+                            <constraint firstItem="eJx-e3-hkU" firstAttribute="leading" secondItem="ezL-Rc-Dlo" secondAttribute="leading" id="l3M-mg-kKp"/>
+                            <constraint firstItem="24I-Bd-pjH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tDd-Zc-Tu7"/>
+                            <constraint firstItem="Fx9-3P-iIH" firstAttribute="leading" secondItem="uTZ-d3-0fE" secondAttribute="leading" id="uHB-fO-nlW"/>
+                            <constraint firstItem="nbc-cY-xsr" firstAttribute="centerX" secondItem="24I-Bd-pjH" secondAttribute="centerX" id="vog-yc-Rx4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mensConvertedShoeSizeLabel" destination="ezL-Rc-Dlo" id="5wp-U5-pbu"/>
+                        <outlet property="mensShoeSizeTextField" destination="mtf-0l-Bg9" id="ugU-dd-bhZ"/>
+                        <outlet property="womensConvertedShoeSizeLabel" destination="a6p-6K-fR9" id="Cnl-3C-lei"/>
+                        <outlet property="womensShoeSizeTextField" destination="Sa6-cl-5EW" id="ufe-G8-id7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="337"/>
         </scene>
     </scenes>
 </document>
